@@ -1,0 +1,89 @@
+KLASSE main erstellen
+
+   HAUPTPROGRAMM
+	ESTELLE Objekt schlange VOM TYP Schlange
+	ERSTELLE Objekt Spielfeld VOM TYP Spielfeld
+
+	SOLANGE Position der Schlange KLEINER ALS 10
+		HOLE aktuelle Postion der Schlange
+		ÜBERGIBT Position AN spielfeld.zeichnen()
+
+		WARTE 500 MS
+
+		BEWEGE Schlange um 1 nach rechts
+	ENDE SOLANGE
+
+	GIB "Futter gefressen!" AUS
+
+ENDE HAUPTPROGRAMM
+
+ENDE KLASSE
+=================================================
+
+KLASSE Schlange erstellen
+
+	PRIVATE x = 0
+
+	METHODE getX()
+	   GIB x ZURÜCK
+	ENDE METHODE
+
+	METHODE bewegen()
+	   ERHÖHE x UM 1
+	ENDE METHODE
+
+
+ENDE KLASSE
+=================================================
+
+KLASSE Spielfeld erstellen
+
+	PRIVATE Feld = 2D ARRAY MIT 5 ZEILEN UND 10 SPALTEN
+
+	METHODE zeichnen(x)
+
+	  FÜR jede Zeile i im Spielfeld
+	     FÜR jede Spalte j in der zeile
+		  SETZE feld[i][j] AUF '.'
+	     ENDE FÜR
+	  ENDE FÜR
+
+	  SETZE feld[2][x] AUF '0'
+
+	  WENN x GLEICH 9
+	      SETZE feld[2][9] AUF '0'
+	  SONST
+              SETZE feld[2][9] AUF 'X'
+	  ENDE WENN
+
+
+	  FÜR jede Zeile im Spielfeld
+		  GIB Zeile AUS
+	  ENDE FÜR
+	ENDE METHODE
+
+    ENDE KLASSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
